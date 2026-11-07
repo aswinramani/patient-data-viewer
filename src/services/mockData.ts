@@ -24,10 +24,11 @@ export const mockSection: Section = {
             id: { root: '1.2.3.4', extension: 'problem-1' },
             code: null,
             statusCode: 'active',
-            effectiveTime: { low: '20200315', high: null, nullFlavor: null, value: null },
+            effectiveTime: { low: { value: '20200315' }, high: null, nullFlavor: null, value: null },
             entryRelationships: [
               {
                 typeCode: 'SUBJ',
+                inversionInd: null,
                 observation: {
                   classCode: 'OBS',
                   moodCode: 'EVN',
@@ -44,22 +45,25 @@ export const mockSection: Section = {
                   },
                   statusCode: 'completed',
                   text: { value: 'Type 2 Diabetes Mellitus' },
-                  effectiveTime: { low: '20200315', high: null, nullFlavor: null, value: null },
+                  effectiveTime: { low: { value: '20200315' }, high: null, nullFlavor: null, value: null },
                   value: {
-                    code: {
-                      code: '44054006',
-                      displayName: 'Type 2 Diabetes Mellitus',
-                      codeSystem: '2.16.840.1.113883.6.96',
-                      codeSystemName: 'SNOMED CT',
-                      nullFlavor: null,
-                      xsiType: null,
-                      translations: [],
+                    content: {
+                      coded: {
+                        code: '44054006',
+                        displayName: 'Type 2 Diabetes Mellitus',
+                        codeSystem: '2.16.840.1.113883.6.96',
+                        codeSystemName: 'SNOMED CT',
+                        nullFlavor: null,
+                        xsiType: null,
+                        translations: [],
+                      },
                     },
                     originalText: { value: 'Type 2 Diabetes' },
                   },
                   author: null,
                   entryRelationships: [],
                 },
+                act: null
               },
             ],
           },
